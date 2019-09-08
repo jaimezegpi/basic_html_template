@@ -1,0 +1,89 @@
+/*FUCKNIMATION*/
+/* Animation ini*/
+
+
+/*fadeIn*/
+@keyframes fadeIn {
+  from {opacity: 0; width:0; height:0;}
+  to {opacity: 1; width:inherit; height:inherit;}
+}
+
+/*fadeOut*/
+@keyframes fadeOut {
+	from {opacity: 1; width:inherit; height:inherit;}
+	to {opacity: 0; width:0; height:0;}
+}
+
+/*Pulse*/
+@keyframes pulse {
+	0%{ transform: scale(1);  }
+	50%{ transform: scale(1.2);  }
+	100%{ transform: scale(1);  }
+}
+
+/*slideInFromLeft*/
+@keyframes slideInFromLeft {
+	0% { transform: translateX(-100%); }
+	100% { transform: translateX(0%); }
+}
+
+/*slideInFromRigth*/
+@keyframes slideInFromRight {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(0%); }
+}
+
+
+/*spinLeft*/
+@keyframes spinLeft {
+	0%{ transform: rotateZ(0deg);  }
+	50%{ transform: rotateZ(-180deg);  }
+	100%{ transform: rotateZ(-360deg);  }
+}
+
+/*spinRight*/
+@keyframes spinRight{
+	0%{ transform: rotateZ(0deg);  }
+	50%{ transform: rotateZ(180deg);  }
+	100%{ transform: rotateZ(360deg);  }	
+}
+
+.fadeIn{
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	overflow:hidden;
+}
+
+.fadeOut{
+	animation-name: fadeOut;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	overflow:hidden;
+}
+
+.slideInFromLeft{
+	animation-name: slideInFromLeft;
+	animation-duration: 1s;
+
+}
+
+.slideInFromRight{
+	animation-name: slideInFromRight;
+	animation-duration: 1s;
+}
+
+.spinLeft{
+	animation: spinLeft 1s linear;
+}
+
+.spinRight{
+	animation: spinRight 1s linear;
+}
+
+.pulse{
+	animation: pulse;
+	animation-duration: 1s;
+	transform-origin: 50% 50%;
+}
+/* Animation end*/

@@ -1,3 +1,23 @@
 @import  url("mini-dark.min.css");
 @import  url("fucknimation.css");
 /*-------------------------------------*/
+
+/*Editor ini*/
+
+.align-left{ text-align: left; }
+.align-right{ text-align: right; }
+.align-center{ text-align: center; }
+.align-justify{ text-align: justify; }
+
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
+.capitalize{ text-transform: capitalize; }
+
+.drop-caps:first-letter{
+    display:block;
+    float:left;
+    margin:3px;
+    color:#f00;
+    font-size:300%;
+}
+/*Editor end*/

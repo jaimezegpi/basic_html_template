@@ -37,40 +37,33 @@
 /*spinLeft*/
 @keyframes spinLeft {
 	0%{ transform: rotateZ(0deg);  }
-	50%{ transform: rotateZ(-180deg);  }
 	100%{ transform: rotateZ(-360deg);  }
 }
 
 /*spinRight*/
 @keyframes spinRight{
 	0%{ transform: rotateZ(0deg);  }
-	50%{ transform: rotateZ(180deg);  }
 	100%{ transform: rotateZ(360deg);  }	
 }
 
 .fadeIn{
-	animation-name: fadeIn;
-	animation-duration: 1s;
+	animation: fadeIn 1s;
 	animation-fill-mode: forwards;
 	overflow:hidden;
 }
 
 .fadeOut{
-	animation-name: fadeOut;
-	animation-duration: 1s;
+	animation: fadeOut 1s;
 	animation-fill-mode: forwards;
 	overflow:hidden;
 }
 
 .slideInFromLeft{
-	animation-name: slideInFromLeft;
-	animation-duration: 1s;
-
+	animation: slideInFromLeft 1s;
 }
 
 .slideInFromRight{
-	animation-name: slideInFromRight;
-	animation-duration: 1s;
+	animation: slideInFromRight 1s;
 }
 
 .spinLeft{
@@ -82,8 +75,7 @@
 }
 
 .pulse{
-	animation: pulse;
-	animation-duration: 1s;
+	animation: pulse 1s;
 	transform-origin: 50% 50%;
 }
 /* Animation end*/

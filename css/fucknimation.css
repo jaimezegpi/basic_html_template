@@ -1,6 +1,18 @@
 /*FUCKNIMATION*/
 /* Animation ini*/
 
+/*slideInFromLeft*/
+@keyframes slideInFromLeft {
+	0% { transform: translateX(-100%); }
+	100% { transform: translateX(0%); }
+}
+
+/*slideInFromRigth*/
+@keyframes slideInFromRight {
+	0% { transform: translateX(100%); }
+	100% { transform: translateX(0%); }
+}
+
 
 /*fadeIn*/
 @keyframes fadeIn {
@@ -20,19 +32,6 @@
 	50%{ transform: scale(1.2);  }
 	100%{ transform: scale(1);  }
 }
-
-/*slideInFromLeft*/
-@keyframes slideInFromLeft {
-	0% { transform: translateX(-100%); }
-	100% { transform: translateX(0%); }
-}
-
-/*slideInFromRigth*/
-@keyframes slideInFromRight {
-	0% { transform: translateX(100%); }
-	100% { transform: translateX(0%); }
-}
-
 
 /*spinLeft*/
 @keyframes spinLeft {
@@ -66,6 +65,11 @@
 	animation: slideInFromRight 1s;
 }
 
+.pulse{
+	animation: pulse 1s;
+	transform-origin: 50% 50%;
+}
+
 .spinLeft{
 	animation: spinLeft 1s linear;
 }
@@ -74,8 +78,5 @@
 	animation: spinRight 1s linear;
 }
 
-.pulse{
-	animation: pulse 1s;
-	transform-origin: 50% 50%;
-}
+
 /* Animation end*/

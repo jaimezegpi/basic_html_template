@@ -1,5 +1,6 @@
 /* Action on start ini */
 base_importScript( "js/fucknimation.js" );
+base_importScript( "js/functions.js" );
 /* Action on start end */
 
 /* Import external Javascript File */

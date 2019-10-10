@@ -13,6 +13,16 @@
 	100% { transform: translateX(0%); }
 }
 
+@keyframes slideInFromTop {
+	0% { transform: translateY(-200%); }
+	100% { transform: translateY(0%); }
+}
+
+
+@keyframes slideInFromBottom {
+	0% { transform: translateY(200%); }
+	100% { transform: translateY(0%); }
+}
 
 /*fadeIn*/
 @keyframes fadeIn {
@@ -63,6 +73,14 @@
 
 .slideInFromRight{
 	animation: slideInFromRight 1s;
+}
+
+.slideInFromTop{
+	animation: slideInFromTop 1s;	
+}
+
+.slideInFromBottom{
+	animation: slideInFromBottom 1s;	
 }
 
 .pulse{

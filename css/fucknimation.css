@@ -7,11 +7,24 @@
 	100% { transform: translateX(0%); }
 }
 
+/*slideOutToLeft*/
+@keyframes slideOutToLeft {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
 /*slideInFromRigth*/
 @keyframes slideInFromRight {
 	0% { transform: translateX(100%); }
 	100% { transform: translateX(0%); }
 }
+
+/*slideoutToRigth*/
+@keyframes slideOutToRight {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(100%); }
+}
+
 
 @keyframes slideInFromTop {
 	0% { transform: translateY(-200%); }

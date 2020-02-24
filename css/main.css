@@ -31,35 +31,47 @@ You can switch style replace mini-dark.min.css
 /*ScrollBar end*/
 
 /*layout ini*/
-.flex-column{
+
+.flex{
   display: flex;
+}
+
+.flex-direction-column{
   flex-direction: column;
 }
 
-.flex-row{
-  display: flex;
+.flex-direction-row{
   flex-direction: row;
 }
 
-.flex-center{
+.flex-jc-start{
+  justify-content: flex-start;
+}
+
+.flex-jc-end{
+  justify-content: flex-end;
+}
+
+.flex-jc-center{
   justify-content: center;
 }
 
-.flex-space-around{
+.flex-jc-space-around{
   justify-content: space-around;
 }
 
-.flex-space-between{
+.flex-jc-space-between{
   justify-content: space-between;
 }
+
 /*layout end*/
 
 /*Editor ini*/
 
-.align-left{ text-align: left; }
-.align-right{ text-align: right; }
-.align-center{ text-align: center; }
-.align-justify{ text-align: justify; }
+.text-align-left{ text-align: left; }
+.text-align-right{ text-align: right; }
+.text-align-center{ text-align: center; }
+.text-align-justify{ text-align: justify; }
 
 .uppercase{ text-transform: uppercase; }
 .lowercase{ text-transform: lowercase; }

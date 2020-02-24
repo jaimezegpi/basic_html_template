@@ -29,6 +29,21 @@
 	}
 })();
 
+/*opacity*/
+( function(){
+	var sec = 0;
+	var ade = document.querySelectorAll("[class*='opacity_']");
+	for (i = 0; i < ade.length; i++) {
+		var ade_cl = ade[i].classList;
+		for (c=0; c < ade_cl.length; c++ ){
+			if( ade_cl[c].indexOf("opacity_") > -1 ){
+				sec = ade_cl[c].split("opacity_")[1];
+			}
+		}
+		if (sec){ ade[i].style.opacity = sec; }
+	}
+})();
+
 /*actions*/
 /* Add Class fadeIn to an specific Element
 in: el, individual element or group of elements. use  querySelectorAll Logic

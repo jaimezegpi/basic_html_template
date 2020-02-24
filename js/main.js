@@ -1,6 +1,7 @@
 /* Action on start ini */
-base_importScript( "js/fucknimation.js" );
-base_importScript( "js/functions.js" );
+var path_url = "";
+base_importScript( path_url+"js/fucknimation.js" );
+base_importScript( path_url+"js/functions.js" );
 /* Action on start end */
 
 /* Import external Javascript File */

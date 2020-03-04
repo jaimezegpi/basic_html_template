@@ -14,15 +14,15 @@
 })();
 
 
-/*animation-iteration-count*/
+/*animation-count*/
 ( function(){
 	var sec = 0;
-	var ade = document.querySelectorAll("[class*='animation-iteration-count_']");
+	var ade = document.querySelectorAll("[class*='animation-count_']");
 	for (i = 0; i < ade.length; i++) {
 		var ade_cl = ade[i].classList;
 		for (c=0; c < ade_cl.length; c++ ){
-			if( ade_cl[c].indexOf("animation-iteration-count_") > -1 ){
-				sec = ade_cl[c].split("animation-iteration-count_")[1];
+			if( ade_cl[c].indexOf("animation-count_") > -1 ){
+				sec = ade_cl[c].split("animation-count_")[1];
 			}
 		}
 		if (sec){ ade[i].style.animationIterationCount = sec; }
@@ -139,3 +139,69 @@ window.addEventListener("scroll",function(){
 	}
 });
 /*Show El Into View end */
+
+/*calculate bounding box ini*/
+function base_resizeToBoundingBox( parent_id, ele_id ){
+	/*
+	if ( !parent_id || !ele_id ){ return false; }
+	if ( !document.getElementById(parent_id) || !document.getElementById(ele_id) ){ return false; }
+	*/
+	var el = document.getElementById(parent_id);
+	var img = document.getElementById(ele_id);
+	var w = el.offsetWidth;
+	var h = el.offsetHeight;
+
+	var angle_a = getCurrentRotation(el);
+	var angle_img = getCurrentRotation(el)*-1;
+	
+
+	var angle = angle_a * Math.PI / 180,
+	    sin   = Math.sin(angle),
+	    cos   = Math.cos(angle);
+
+	var x1 = cos * w,
+	    y1 = sin * w;
+
+	var x2 = -sin * h,
+	    y2 = cos * h;
+
+	var x3 = cos * w - sin * h,
+	    y3 = sin * w + cos * h;
+
+	var minX = Math.min(0, x1, x2, x3),
+	    maxX = Math.max(0, x1, x2, x3),
+	    minY = Math.min(0, y1, y2, y3),
+	    maxY = Math.max(0, y1, y2, y3);
+
+	var rotatedWidth  = maxX - minX,
+	    rotatedHeight = maxY - minY;
+
+	var pimgl = ( (rotatedWidth-w)/2 )*-1;
+	var pimgt = ( (rotatedHeight-h)/2 )*-1;
+	
+	img.style.width=rotatedWidth+"px";
+	
+	img.style.left=pimgl+"px";
+	img.style.top=pimgt+"px";
+
+	img.style.height=rotatedHeight+"px";
+
+	img.style.transform="rotate("+angle_img+"deg)";
+} 
+
+function getCurrentRotation(el){
+	var st = window.getComputedStyle(el, null);
+	var tm = st.getPropertyValue("-webkit-transform") ||
+	st.getPropertyValue("-moz-transform") ||
+	st.getPropertyValue("-ms-transform") ||
+	st.getPropertyValue("-o-transform") ||
+	st.getPropertyValue("transform") ||
+	"none";
+	if (tm != "none") {
+		var values = tm.split('(')[1].split(')')[0].split(',');
+		var angle = Math.round(Math.atan2(values[1],values[0]) * (180/Math.PI));
+		return (angle < 0 ? angle + 360 : angle);
+	}
+	return 0;
+}
+/*calculate bounding box ini*/

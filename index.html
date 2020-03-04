@@ -50,7 +50,8 @@
 		<p>List of class you can use. Fuckanimation.</p>
 		<ul>
 			<li>
-				<h3>slideInFromLeft <sub>CLASS</sub>  </h3>
+				<h3>slideInFromLeft <sub>CLASS</sub></h3>
+				<div><sub>Use showIntoViewport CLASS to show element only when this enter in screen</sub></div>
 				<div class="slideInFromLeft">
 					<div  style="text-align: center;">
 						<img src="img/dial-32x32.png">
@@ -59,6 +60,7 @@
 			</li>
 			<li>
 				<h3>slideInFromRight <sub>CLASS</sub></h3>
+				<div><sub>Use showIntoViewport CLASS to show element only when this enter in screen</sub></div>
 				<div class="slideInFromRight">
 					<div  style="text-align: center;">
 						<img src="img/dial-32x32.png">
@@ -67,6 +69,7 @@
 			</li>
 			<li>
 				<h3>slideInFromTop <sub>CLASS</sub></h3>
+				<div><sub>Use showIntoViewport CLASS to show element only when this enter in screen</sub></div>
 				<div class="slideInFromTop">
 					<div  style="text-align: center;">
 						<img src="img/dial-32x32.png">
@@ -75,6 +78,7 @@
 			</li>
 			<li>
 				<h3>slideInFromBottom <sub>CLASS</sub></h3>
+				<div><sub>Use showIntoViewport CLASS to show element only when this enter in screen</sub></div>
 				<div class="slideInFromBottom">
 					<div  style="text-align: center;">
 						<img src="img/dial-32x32.png">
@@ -83,6 +87,7 @@
 			</li>
 			<li>
 				<h3>fadeIn <sub>CLASS</sub></h3>
+				<div><sub>Use showIntoViewport CLASS to show element only when this enter in screen</sub></div>
 				<div class="fadeIn">
 					<div  style="text-align: center;">
 						<img src="img/dial-32x32.png">
@@ -91,6 +96,7 @@
 			</li>
 			<li>
 				<h3>fadeOut <sub>CLASS</sub></h3>
+				<div><sub>Use showIntoViewport CLASS to show element only when this enter in screen</sub></div>
 				<div class="fadeOut">
 					<div  style="text-align: center;">
 						<img src="img/dial-32x32.png">
@@ -99,32 +105,32 @@
 			</li>
 			<li>
 				<h3>pulse <sub>CLASS</sub></h3>
-				<p>+ animation-iteration-count_infinite <sub>CLASS</sub></p>
+				<p>+ animation-count_infinite <sub>CLASS</sub></p>
 				<div >
 					<div  style="text-align: center;">
-						<img class="pulse animation-iteration-count_infinite" src="img/dial-32x32.png">
+						<img class="pulse animation-count_infinite" src="img/dial-32x32.png">
 					</div>	
 				</div>
 			</li>
 			<li>
 				<h3>spinLeft <sub>CLASS</sub></h3>
-				<p>+ animation-iteration-count_infinite <sub>CLASS</sub></p>
+				<p>+ animation-count_infinite <sub>CLASS</sub></p>
 				<div  style="text-align: center;">
-					<img class="spinLeft animation-iteration-count_infinite" src="img/dial-32x32.png">
+					<img class="spinLeft animation-count_infinite" src="img/dial-32x32.png">
 				</div>	
 			</li>
 			<li>
 				<h3>spinRight <sub>CLASS</sub></h3>
-				<p>+ animation-iteration-count_infinite <sub>CLASS</sub></p>
+				<p>+ animation-count_infinite <sub>CLASS</sub></p>
 				<div  style="text-align: center;">
-					<img class="spinRight animation-iteration-count_infinite" src="img/dial-32x32.png">
+					<img class="spinRight animation-count_infinite" src="img/dial-32x32.png">
 				</div>	
 			</li>
 			<li>
-				<h3>animation-iteration-count_X <sub>CLASS</sub></h3>
+				<h3>animation-count_X <sub>CLASS</sub></h3>
 				<p>Special Class use, X = Repeat Number</p>
-				<p>animation-iteration-count_3 = repeat animation 3 times.</p>
-				<p>animation-iteration-count_infinite = loop animation infinity.</p>
+				<p>animation-count_3 = repeat animation 3 times.</p>
+				<p>animation-count_infinite = loop animation infinity.</p>
 			</li>
 			<li>
 				<h3>animation-duration_X <sub>CLASS</sub></h3>
@@ -158,22 +164,35 @@
 			<li>
 				<h3>base_loadDataToFunction(data_url, custom_function)</h3>
 				<p>data_url: External file ( json, html, txt, etc. )</p>
-				<p>custom_function: Your custom funtion</p>
+				<p>custom_function: Your custom function</p>
 			</li>
 			<li>
 				<h3>base_getJson(data_url, custom_function)</h3>
 				<p>data_url: External file ( json, html, txt, etc. )</p>
-				<p>custom_function: Your custom funtion</p>
+				<p>custom_function: Your custom function</p>
 			</li>
 			<li>
 				<h3>base_fadeIn(element)</h3>
 				<p>element: Use QuerySelectorAll Logic ( .class, #id, div etc.. )</p>
-				<p>Add class .fadeIn to element. If has class .fadeOut whil be removed</p>
+				<p>Add class .fadeIn to element. If has class .fadeOut be removed</p>
 			</li>
 			<li>
 				<h3>base_fadeOut(element)</h3>
 				<p>element: Use QuerySelectorAll Logic ( .class, #id, div etc.. )</p>
 				<p>Add class .fadeOut to element. If has class .fadeIn whil be removed</p>
+			</li>
+			<li>
+				<h3>base_resizeToBoundingBox( parent_id, element_id )</h3>
+				<p>parent_id: ID of container o div .</p>
+				<p>element_id: ID of Img o div to resize.</p>
+				<button class="button" onClick='base_resizeToBoundingBox( "parent_id", "element_id" )'>APPLY base_resizeToBoundingBox( "parent_id", "element_id" )</button>
+				<div class="example" style="display:flex; justify-content: center;">
+					<div id="parent_id" style="transform: rotate(45deg); position: relative; width:100px; height: 200px; border-style: solid; border-width: 1px; ">
+						<div id="element_id" style="position: absolute; background-color: red; opacity: 0.5;">Element_Id</div>
+					</div>
+
+				</div>
+				
 			</li>
 
 		</ul>
@@ -188,5 +207,8 @@
 		</div>
 	</div>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+	//base_resizeToBoundingBox( "parent_id", "element_id" );
+</script>
 </body>
 </html>

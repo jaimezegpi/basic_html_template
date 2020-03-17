@@ -44,6 +44,38 @@
 	}
 })();
 
+
+/*scaling*/
+( function(){
+	var ade = document.querySelectorAll("[class*='scaling']");
+	if (ade.length){
+		scaleOnResize();
+		window.onresize = window.onresize = function(){ scaleOnResize(); };
+	}
+})();
+function scaleOnResize(){
+	var ade = document.querySelectorAll("[class*='scaling']");
+	for (i = 0; i < ade.length; i++) {
+		var ade_cl = ade[i].classList;
+
+		let oh = ade[i].offsetHeight;
+		let ow = ade[i].offsetWidth;
+		let scale = Math.min(
+			ade[i].parentElement.clientHeight/oh,
+			ade[i].parentElement.clientWidth/ow
+		);
+
+		let marg = ( (1-scale)/2 )*100;
+		ade[i].style.transform = "translate(-"+marg+"%, -"+marg+"% ) scale(" + scale + ")";
+		//ade[i].style.transform = "scale(" + scale + ")";
+		oh = ade[i].getBoundingClientRect().height;
+		ow = ade[i].getBoundingClientRect().width;
+		let left = ( (( ade[i].parentElement.clientWidth-ow )/2)*100)/ade[i].parentElement.clientWidth;
+
+	}
+}
+
+
 /*actions*/
 /* Add Class fadeIn to an specific Element
 in: el, individual element or group of elements. use  querySelectorAll Logic

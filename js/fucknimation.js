@@ -66,11 +66,18 @@ function scaleOnResize(){
 		);
 
 		let marg = ( (1-scale)/2 )*100;
-		ade[i].style.transform = "translate(-"+marg+"%, -"+marg+"% ) scale(" + scale + ")";
+		ade[i].style.transformOrigin = "0 0";
+		ade[i].style.transform = "scale(" + scale + ")";
+
 		//ade[i].style.transform = "scale(" + scale + ")";
 		oh = ade[i].getBoundingClientRect().height;
 		ow = ade[i].getBoundingClientRect().width;
-		let left = ( (( ade[i].parentElement.clientWidth-ow )/2)*100)/ade[i].parentElement.clientWidth;
+		let mrl = ( ade[i].parentElement.clientWidth-ow )/2;
+		let mrt = ( ade[i].parentElement.clientHeight-oh )/2;
+		ade[i].style.position = "relative";
+		ade[i].style.marginLeft = mrl+"px";
+		ade[i].style.top = mrt+"px";
+		//let left = ( (( ade[i].parentElement.clientWidth-ow )/2)*100)/ade[i].parentElement.clientWidth;
 
 	}
 }

@@ -7,6 +7,12 @@ You can switch style replace mini-dark.min.css
 */
 /*-------------------------------------*/
 
+/*smooth scroll ini*/
+html {
+  scroll-behavior: smooth;
+}
+/*smooth scroll end*/
+
 /*ScrollBar ini*/
 
 /* width */

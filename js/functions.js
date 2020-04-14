@@ -53,3 +53,7 @@ function base_getJson(data_url, custom_function) {
 	});
 	*/
 }
+
+function base_onLoad(){
+	/* your code on load Page Finish*/
+}

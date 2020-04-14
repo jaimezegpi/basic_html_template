@@ -1,12 +1,3 @@
-@import  url("mini-dark.min.css");
-@import  url("fucknimation.css");
-/*
-You can switch style replace mini-dark.min.css
-@import  url("mini-default.min.css");
-@import  url("mini-nord.min.css");
-*/
-/*-------------------------------------*/
-
 /*smooth scroll ini*/
 html {
   scroll-behavior: smooth;
